@@ -52,13 +52,13 @@
                         {%- if categories is defined -%}
                         {%- for category in categories -%}
                         <li>
-                            {{- 
+                            {{-
                                 link_to('category/' ~ category.id ~ '/' ~ category.slug,
                                     '<span class="label label-default pull-right">' ~ category.number_posts ~ '</span>' ~ category.name)
                             -}}
                         </li>
                         {%- endfor -%}
-                        {%- endif -%}                          
+                        {%- endif -%}
                         {%- endcache -%}
                         {%- if session.get('identity-admin') == 'Y' -%}
                         <li>
@@ -68,7 +68,6 @@
                             -}}
                         </li>
                         {% endif %}
-
                     </ul>
                 </li>
                 <li>{{ link_to('help', '<span class="octicon octicon-info"></span>', 'title': 'Help') }}</li>
